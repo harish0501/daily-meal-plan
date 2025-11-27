@@ -259,13 +259,53 @@ const App = () => {
             <div className="h-full bg-white transition-all duration-500 rounded-full" style={{ width: `${(getCompletedCount() / mealPlan.length) * 100}%` }}></div>
           </div>
           <div className="text-center text-sm font-black text-zinc-400 tracking-widest uppercase">
-            {getCompletedCount()} / {mealPlan.length} Annihilated
+            {getCompletedCount() } / {mealPlan.length} Annihilated
           </div>
           {!notificationsEnabled && (
             <button onClick={requestNotif} className="w-full bg-white text-black py-5 rounded-2xl font-black text-lg mt-6 hover:bg-zinc-200 transition-all shadow-xl flex items-center justify-center gap-3 uppercase tracking-wider">
               <Bell size={24} /> Activate Alerts
             </button>
           )}
+        </div>
+
+        {/* Daily Stats */}
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 shadow-xl hover:border-white transition-all">
+            <Droplets size={32} className="mb-2" />
+            <div className="text-3xl font-black">3.5L</div>
+            <div className="text-xs font-black opacity-60 uppercase tracking-wider">Water</div>
+          </div>
+          <div className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 shadow-xl hover:border-white transition-all">
+            <Activity size={32} className="mb-2" />
+            <div className="text-3xl font-black">10K</div>
+            <div className="text-xs font-black opacity-60 uppercase tracking-wider">Steps</div>
+          </div>
+          <div className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl p-5 shadow-xl hover:border-white transition-all">
+            <Flame size={32} className="mb-2 text-orange-500" />
+            <div className="text-3xl font-black">{mealPlan.length}</div>
+            <div className="text-xs font-black opacity-60 uppercase tracking-wider">Targets</div>
+          </div>
+        </div>
+
+        {/* Vitamins */}
+        <div className="bg-zinc-900 border-2 border-zinc-800 rounded-3xl shadow-2xl p-6 mb-6">
+          <h2 className="text-2xl font-black mb-5 flex items-center gap-3 uppercase tracking-wide">
+            <Target size={28} /> Supplement Protocol
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { name: 'Zinc', active: vitaminSchedule.zinc, time: 'Lunch' },
+              { name: 'Vitamin D', active: vitaminSchedule.vitaminD, time: 'Lunch' },
+              { name: 'Vitamin C', active: vitaminSchedule.vitaminC, time: 'Bedtime' },
+              { name: 'Iron', active: vitaminSchedule.iron, time: 'Bedtime' }
+            ].map((vit, i) => (
+              <div key={i} className={`p-5 rounded-2xl font-black transition-all border-2 ${vit.active ? 'bg-white text-black border-white scale-105' : 'bg-zinc-800 text-zinc-600 border-zinc-700'}`}>
+                <div className="text-lg uppercase tracking-wide">{vit.name}</div>
+                <div className="text-xs opacity-60 uppercase tracking-widest">{vit.time}</div>
+                <div className="text-3xl mt-2">{vit.active ? '●' : '○'}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Body Weight Tracker */}

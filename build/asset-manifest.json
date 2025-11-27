@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/daily-meal-plan/static/js/main.22cbff61.js",
+    "main.js": "/daily-meal-plan/static/js/main.c62ebc1a.js",
     "static/js/239.fbd4d925.chunk.js": "/daily-meal-plan/static/js/239.fbd4d925.chunk.js",
     "static/js/213.ffcc5b42.chunk.js": "/daily-meal-plan/static/js/213.ffcc5b42.chunk.js",
     "static/js/455.f8d278f7.chunk.js": "/daily-meal-plan/static/js/455.f8d278f7.chunk.js",
     "index.html": "/daily-meal-plan/index.html",
-    "main.22cbff61.js.map": "/daily-meal-plan/static/js/main.22cbff61.js.map",
+    "main.c62ebc1a.js.map": "/daily-meal-plan/static/js/main.c62ebc1a.js.map",
     "239.fbd4d925.chunk.js.map": "/daily-meal-plan/static/js/239.fbd4d925.chunk.js.map",
     "213.ffcc5b42.chunk.js.map": "/daily-meal-plan/static/js/213.ffcc5b42.chunk.js.map",
     "455.f8d278f7.chunk.js.map": "/daily-meal-plan/static/js/455.f8d278f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.22cbff61.js"
+    "static/js/main.c62ebc1a.js"
   ]
 }

@@ -6,25 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="EATFORCE – Zero Mercy Nutrition & Training System" />
-
-    <!-- PWA -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-192.png" />
-
     <title>EATFORCE</title>
-    <style>
-      body { margin: 0; background: #000; font-family: 'Helvetica Neue', sans-serif; }
-    </style>
+    <style>body { margin: 0; background: #000; font-family: 'Helvetica Neue', sans-serif; }</style>
   </head>
   <body>
     <div id="root"></div>
-
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
-    </script>
   </body>
 </html>
