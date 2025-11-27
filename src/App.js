@@ -6,7 +6,7 @@ import {
 import { format, subDays } from 'date-fns';
 import jsPDF from 'jspdf';
 
-const EATFORCE = () => {
+const App = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [completedTasks, setCompletedTasks] = useState({});
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
@@ -321,4 +321,4 @@ const EATFORCE = () => {
   );
 };
 
-export default EATFORCE;
+export default App;
